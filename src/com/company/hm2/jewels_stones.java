@@ -1,7 +1,6 @@
 package com.company.hm2;
 
 public class jewels_stones {
-
     public int numJewelsInStones(String jewels, String stones) {
 
         int numOfJewelsYouHave = 0;
@@ -22,5 +21,4 @@ public class jewels_stones {
             }
         }
         return numOfJewelsYouHave;
-    }
 }
