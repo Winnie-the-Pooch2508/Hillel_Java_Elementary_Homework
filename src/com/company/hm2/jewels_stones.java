@@ -21,4 +21,5 @@ public class jewels_stones {
             }
         }
         return numOfJewelsYouHave;
+    }
 }
