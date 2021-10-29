@@ -8,8 +8,9 @@ public class First {
 
         /*
         FirstTask:
-        Given an integer array nums,move all the even integers at the beginning of the array followed
-        by all the odd integers. Return any array that satisfies this condition.
+        Given an integer array nums,
+        move all the even integers at the beginning of the array followed by all the odd integers.
+        Return any array that satisfies this condition.
          */
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -47,7 +48,7 @@ public class First {
 
     }
 
-    public static void sortArrayByParity(int[] nums) {
+    public static int[] sortArrayByParity(int[] nums) {
         int numberOfEven = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] % 2 == 0) {
@@ -57,5 +58,6 @@ public class First {
                 numberOfEven++;
             }
         }
+        return nums;
     }
 }
