@@ -2,17 +2,15 @@ package com.company.hm4;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+/*
+       FirstTask:
+       Given an integer array nums,
+       move all the even integers at the beginning of the array followed by all the odd integers.
+       Return any array that satisfies this condition.
+        */
 public class First {
+
     public static void main(String[] args) throws IOException {
-
-        /*
-        FirstTask:
-        Given an integer array nums,
-        move all the even integers at the beginning of the array followed by all the odd integers.
-        Return any array that satisfies this condition.
-         */
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("Введите размер целочисленного массива:");
@@ -48,16 +46,18 @@ public class First {
 
     }
 
-    public static int[] sortArrayByParity(int[] nums) {
-        int numberOfEven = 0;
+
+    private static int[] sortArrayByParity(int[] nums) {
+        int n = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] % 2 == 0) {
-                int tmp = nums[i];
-                nums[i] = nums[numberOfEven];
-                nums[numberOfEven] = tmp;
-                numberOfEven++;
+                int temp = nums[i];
+                nums[i] = nums[n];
+                nums[n] = temp;
+                n++;
             }
         }
         return nums;
     }
 }
+
