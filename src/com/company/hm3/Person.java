@@ -11,10 +11,10 @@ public class Person {
         this.fathername = fathername;
     }
 
-    public Person(String surnameNamePatronymic) {
+    public Person(String surnameNamefathername) {
         String[] fullNameOfThePerson;
         String del = " ";
-        fullNameOfThePerson = surnameNamePatronymic.split(del);
+        fullNameOfThePerson = surnameNamefathername.split(del);
         this.surname = fullNameOfThePerson[0];
         this.name = fullNameOfThePerson[1];
         this.fathername = fullNameOfThePerson[2];
