@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
+    public static void main(String[] args) {
+    }
 /*1. Создать метод countOccurance, принимающий на вход строковый список
 в качестве параметра и произвольнуюстроку.
 Список заполнен произвольными словами 10-20 штук, которые могут повторяться в неограниченном количестве.
@@ -43,12 +45,4 @@ public class Main {
         }
         return unique;
     }
-
-
-
-
-
-
-
-
 }
