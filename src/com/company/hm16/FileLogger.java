@@ -31,7 +31,6 @@ public class FileLogger {
         if (fileSize.length() > config.getMaxSize()) {
             config.setOutputFile(String.format("%s%s.txt", config.getOutputFile().substring(0, config.getOutputFile().length() - 4), new Date()));
             initBufferWriter();
-            /*throw new FileMaxSizeReachedException("The size of the file is lower than your message");*/
         }
         bufferedWriter.write(String.format(
                 config.getStringFormat(),
@@ -52,7 +51,6 @@ public class FileLogger {
         if (fileSize.length() > config.getMaxSize()) {
             config.setOutputFile(String.format("%s%s.txt", config.getOutputFile().substring(0, config.getOutputFile().length() - 4), new Date()));
             initBufferWriter();
-       /*throw new FileMaxSizeReachedException("The size of the file is lower than your message");*/
         }
         bufferedWriter.write(String.format(
                 config.getStringFormat(),
