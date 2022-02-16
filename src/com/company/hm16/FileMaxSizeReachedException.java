@@ -1,7 +1,12 @@
 package com.company.hm16;
-import java.io.IOException;
-public class FileMaxSizeReachedException extends IOException {
-    public FileMaxSizeReachedException(String message) {
-        super(message);
+public class FileMaxSizeReachedException extends Exception{
+    private final String exception;
+    public FileMaxSizeReachedException(String exception) {
+        this.exception = exception;
+    }
+
+    @Override
+    public String toString() {
+        return exception;
     }
 }

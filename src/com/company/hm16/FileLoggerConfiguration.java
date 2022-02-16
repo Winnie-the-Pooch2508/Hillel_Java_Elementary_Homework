@@ -1,45 +1,38 @@
 package com.company.hm16;
 
-import java.util.HashMap;
+import java.io.File;
 
 public class FileLoggerConfiguration {
-    public String outputFile;
-    public LoggingLevel loggingLevel;
-    public int maxSize; // number of bytes
-    public String stringFormat = "[%s] [%s] MESSAGE : [%s]";
+    private final File placeForInfo;
+    private final LoggingLevel loggingLevel;
+    private final int maxByteSize;
+    private final String writingFormat;
 
-    public void setOutputFile(String outputFile) {
-        this.outputFile = outputFile;
-    }
-    private void setStringFormat(String stringFormat) {
-        this.stringFormat = stringFormat;
+    public FileLoggerConfiguration(File placeForInfo, LoggingLevel loggingLevel, int maxByteSize, String writingFormat) {
+        this.placeForInfo = placeForInfo;
+        this.loggingLevel = loggingLevel;
+        this.maxByteSize = maxByteSize;
+        this.writingFormat = writingFormat;
     }
 
-    private void setLoggingLevel(String loggingLevel) {
-        switch (loggingLevel) {
-            case "INFO" -> this.loggingLevel = LoggingLevel.INFO;
-            case "DEBUG" -> this.loggingLevel = LoggingLevel.DEBUG;
-        }
+    public File getPlaceForInfo() {
+        return placeForInfo;
     }
-    private void setMaxSize(String maxSize) {
-        this.maxSize = Integer.parseInt(maxSize);
-    }
-    public void initFileLoggerConfiguration(HashMap<String, String> configData) {
-        setOutputFile(configData.get("FILE"));
-        setStringFormat(configData.get("FORMAT"));
-        setLoggingLevel(configData.get("LEVEL"));
-        setMaxSize(configData.get("MAX-SIZE"));
-    }
-    public String getStringFormat() {
-        return stringFormat;
-    }
-    public String getOutputFile() {
-        return outputFile;
-    }
+
     public LoggingLevel getLoggingLevel() {
         return loggingLevel;
     }
-    public int getMaxSize() {
-        return maxSize;
+
+    public int getMaxByteSize() {
+        return maxByteSize;
+    }
+
+    public String getWritingFormat() {
+        return writingFormat;
+    }
+
+    @Override
+    public String toString() {
+        return writingFormat;
     }
 }
