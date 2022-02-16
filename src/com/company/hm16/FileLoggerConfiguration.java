@@ -14,23 +14,18 @@ public class FileLoggerConfiguration {
         this.maxByteSize = maxByteSize;
         this.writingFormat = writingFormat;
     }
-
     public File getPlaceForInfo() {
         return placeForInfo;
     }
-
     public LoggingLevel getLoggingLevel() {
         return loggingLevel;
     }
-
     public int getMaxByteSize() {
         return maxByteSize;
     }
-
     public String getWritingFormat() {
         return writingFormat;
     }
-
     @Override
     public String toString() {
         return writingFormat;

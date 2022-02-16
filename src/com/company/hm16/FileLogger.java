@@ -1,4 +1,5 @@
 package com.company.hm16;
+
 import java.io.*;
 import java.util.Date;
 
@@ -59,7 +60,6 @@ public class FileLogger {
         }
     }
 
-
     private void toDoWriting(String line, FileLoggerConfiguration fileLoggerConfiguration) {
         try {
             sizeChecking(fileLoggerConfiguration);
@@ -79,6 +79,4 @@ public class FileLogger {
             throw new FileMaxSizeReachedException("Your file" + fileLoggerConfiguration.getPlaceForInfo().getPath() + "reached max size = " + fileLoggerConfiguration.getMaxByteSize() + ", your size equals = " + fileLoggerConfiguration.getPlaceForInfo().length());
         }
     }
-
-
 }
